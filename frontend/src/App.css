@@ -181,29 +181,67 @@
     right: 0;
     border-right-color: var(--border);
 }
-  }
-  .content-panel {
-    margin-top: 20px;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .product-table{
-    width: 100%;
-    border-collapse: collapse;
-  }
-  product-table th{
-    text-align: left;
-    padding: 14px 16px;
-    background: #f9fafb;
-    color: #374151;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .product-table td{
-    padding: 14px 16px;
-    border-top: 1px solid #e5e7eb;
-    color: #111827;
-    font-size: 14px;
-  }
+}
+.content-panel {
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.product-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+product-table th{
+  text-align: left;
+  padding: 14px 16px;
+  background: #f9fafb;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+.product-table td{
+  padding: 14px 16px;
+  border-top: 1px solid #e5e7eb;
+  color: #111827;
+  font-size: 14px;
+}
+.status {
+display: inline-flex;
+align-items: center;
+padding: 4px 8px;
+border-radius: 999px;
+font-size: 12px;
+font-weight: 600;
+}
+
+.status.active {
+  background: #dcfce7;
+  color: #166534;
+
+}
+.status.inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.emty-message {
+  padding: 24px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+.page-actions { /* Nhom input tim kiem va nut them san pham */
+  display: flex; /* Dat cac phan tu nam ngang */
+  align-items: center; /* Can giua theo chieu doc */
+  gap: 12px; /* Tao khoang cach giua input va button */
+}
+
+.search-input { /* Style cho o tim kiem san pham */
+  width: 240px; /* Dat chieu rong co dinh cho input */
+  height: 36px; /* Dat chieu cao input */
+  padding: 0 12px; /* Tao khoang cach trai phai ben trong input */
+  border: 1px solid #d1d5db; /* Tao vien xam nhe */
+  border-radius: 6px; /* Bo goc nhe */
+  font-size: 14px; /* Dat kich thuoc chu de doc */
+}

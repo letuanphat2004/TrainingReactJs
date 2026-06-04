@@ -42,12 +42,22 @@ return (
   <h2>{pageTitle}</h2>
   <p>{description}</p>
   </div>
-  <button type="button">Add Products</button>
+  <div className="page-actions"> 
+  <input
+    type="text" 
+    placeholder="Search products..." 
+    className="search-input" 
+  /> 
+  <button type="button">Add Products</button> {/* Nut mo thao tac them san pham */}
+</div>
 </section>
 <section className="content-panel">
 {loading && <p>Loading products...</p>}
 {error && <p className="error">{error}</p>}
-{!loading && !error && (
+{!loading && !error && products.length === 0 && (
+  <p className="empty-message">No products found.</p>
+)}
+{!loading && !error && products.length > 0 && (
 <table className="product-table"> 
   <thead>
     <tr>
@@ -63,7 +73,11 @@ return (
         <td>{product.name}</td>
         <td>${product.price.toLocaleString("vi-VN")}</td>
         <td>{product.stock}</td>
-        <td>{product.active ? "Active" : "Inactive"}</td>
+        <td>
+         <span className={product.active ? "status active" : "status inactive"}>
+          {product.active ? "🟢" : "🔴"}
+         </span>
+        </td>
       </tr>
     ))}
   </tbody>

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="568923d6-0808-4803-bcda-9b459d110aee" name="Changes" comment="update">
+    <list default="true" id="568923d6-0808-4803-bcda-9b459d110aee" name="Changes" comment="https://www.npmjs.com/package/styled-components">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,31 @@
       <option name="project" value="LOCAL" />
       <updated>1780564448887</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="improve product table layout">
+      <option name="closed" value="true" />
+      <created>1780565335508</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780565335508</updated>
+    </task>
+    <task id="LOCAL-00004" summary=" align product table columns">
+      <option name="closed" value="true" />
+      <created>1780565446040</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780565446040</updated>
+    </task>
+    <task id="LOCAL-00005" summary="https://www.npmjs.com/package/styled-components">
+      <option name="closed" value="true" />
+      <created>1780567914249</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1780567914249</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,6 +109,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="improve product table layout" />
+    <MESSAGE value=" align product table columns" />
+    <MESSAGE value="https://www.npmjs.com/package/styled-components" />
+    <option name="LAST_COMMIT_MESSAGE" value="https://www.npmjs.com/package/styled-components" />
   </component>
 </project>
