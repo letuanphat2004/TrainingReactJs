@@ -62,6 +62,7 @@ return (
       <tr key={product.id}>
         <td>{product.name}</td>
         <td>${product.price.toLocaleString("vi-VN")}</td>
+        <td>{product.stock}</td>
         <td>{product.active ? "Active" : "Inactive"}</td>
       </tr>
     ))}
