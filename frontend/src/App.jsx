@@ -71,7 +71,6 @@ return (
 </section>
 </main>
 );
-
 }
 
 export default App;
