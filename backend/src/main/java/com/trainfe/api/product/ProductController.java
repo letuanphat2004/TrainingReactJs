@@ -26,7 +26,7 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> findAll(@RequestParam(required = false) String keyword) {
+    public List<Product> findAll(@RequestParam(name = "keyword", required = false) String keyword) {
         return productService.findAll(keyword);
     }
 
