@@ -17,6 +17,8 @@ const [searchKeyword, setSearchKeyword] = useState("");
 useEffect(() => {
   async function loadProducts() {
     try {
+      setLoading(true);
+      setError("");
 const data = await getProducts(searchKeyword); // Goi ham getProducts tu productApi.js de lay danh sach san pham tu backend Spring Boot
 setProducts(data);
     } catch (err) {

@@ -39,6 +39,8 @@
 - Biet ten bien trong callback phai dung thong nhat, vi neu khai bao `event` thi khong the dung `e`.
 - Biet cach truyen tham so vao ham service de tai su dung logic goi API.
 - Biet dung `encodeURIComponent()` de dua tu khoa tim kiem vao URL an toan.
+- Biet dependency array cua `useEffect` quyet dinh khi nao effect chay lai.
+- Biet truyen state `searchKeyword` vao service de tim kiem du lieu tu backend.
 
 ### Da lam duoc trong project
 
@@ -47,3 +49,4 @@
 - Gan `onChange` cho o search de cap nhat `searchKeyword` khi nguoi dung go phim.
 - Hoan thien controlled input cho o tim kiem san pham.
 - Cap nhat `getProducts(keyword)` de ho tro goi API tim kiem theo query `keyword`.
+- Goi lai API moi khi `searchKeyword` thay doi de tim kiem san pham.
