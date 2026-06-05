@@ -10,3 +10,17 @@ export async function getProducts(keyword = "") { // Tao ham getProducts de App.
 
   return response.json(); // Chuyen du lieu JSON tu backend thanh du lieu JavaScript
 }
+
+export async function createProduct(product) { // Tao ham createProduct de App.jsx goi khi can them san pham moi
+  const response = await fetch(API_BASE_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(product) // Chuyen du lieu san pham moi thanh JSON de gui den backend
+  });
+  if (!response.ok) {
+    throw new Error("Cannot create product");
+  }
+  return response.json();
+}

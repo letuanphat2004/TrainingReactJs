@@ -3,6 +3,7 @@ import './App.css'
 import { getProducts } from './services/productApi';
 import ProductTable from './components/ProductTable';
 import ProductForm from './components/ProductForm';
+import { createProduct } from './services/productApi';
 
 function App() {
 const appName = 'Admin';
@@ -43,6 +44,17 @@ setLoading(false);
   loadProducts();
 }, [debounceKeyword]);
 
+async function handleCreateProduct(productData) {
+  try {
+    setError("");
+    const newProduct = await createProduct(productData); // Goi ham createProduct tu productApi.js de them san pham moi vao backend Spring Boot
+    setProducts((currentProducts) => [newProduct, ...currentProducts]); 
+    setShowProductForm(false); // Dong form them san pham sau khi them thanh cong
+  }
+  catch (err) {
+    setError(err.message);
+  }
+}
 return (
 <main className="app-shell">
 <header className="top-bar">
@@ -70,7 +82,9 @@ return (
   </button> {/* Nut mo thao tac them san pham */}
 </div>
 </section>
-{showProductForm && <ProductForm onClose={() => setShowProductForm(false)} />} {/* Hien thi form them san pham neu showProductForm la true */}
+
+{showProductForm && <ProductForm onClose={() => setShowProductForm(false)} onSubmit={handleCreateProduct} />} {/* Hien thi form them san pham neu showProductForm la true */}
+
 <section className="content-panel">
 {loading && <p>Loading products...</p>}
 {error && <p className="error">{error}</p>}
