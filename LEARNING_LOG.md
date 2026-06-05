@@ -36,9 +36,11 @@
 - Biet dung `value` de gan gia tri state vao input.
 - Biet dung `onChange` de cap nhat state khi nguoi dung nhap du lieu.
 - Hieu `event.target.value` la gia tri hien tai trong input.
+- Biet ten bien trong callback phai dung thong nhat, vi neu khai bao `event` thi khong the dung `e`.
 
 ### Da lam duoc trong project
 
 - Them state `searchKeyword` de luu tu khoa tim kiem san pham.
 - Gan `value={searchKeyword}` cho o search.
 - Gan `onChange` cho o search de cap nhat `searchKeyword` khi nguoi dung go phim.
+- Hoan thien controlled input cho o tim kiem san pham.
