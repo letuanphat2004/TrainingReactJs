@@ -24,6 +24,7 @@
 - Hieu dependency array cua `useEffect`.
 - Biet truyen tham so tim kiem vao service va URL API.
 - Hieu cach truyen du lieu tu component cha sang component con bang props.
+- Hieu debounce giup han che so lan goi API khi nguoi dung nhap lieu.
 
 ### Da lam duoc trong project
 
@@ -31,3 +32,4 @@
 - Cap nhat service va `App.jsx` de tim kiem san pham theo `keyword`.
 - Hoan thien trang thai loading va error khi tim kiem lai.
 - Tach bang san pham thanh component `ProductTable`.
+- Them debounce cho chuc nang tim kiem san pham.

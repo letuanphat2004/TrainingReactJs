@@ -12,12 +12,23 @@ const [products, setProducts] = useState([]);
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState("");
 const [searchKeyword, setSearchKeyword] = useState("");
+const [debounceKeyword, setDebounceKeyword] = useState("");
+useEffect(() => {
+  const handler = setTimeout(() => {
+    setDebounceKeyword(searchKeyword);
+  }, 500);
+
+  return () => {
+    clearTimeout(handler);
+  };
+}, [searchKeyword]);
+
 useEffect(() => {
   async function loadProducts() {
     try {
       setLoading(true);
       setError("");
-const data = await getProducts(searchKeyword); // Goi ham getProducts tu productApi.js de lay danh sach san pham tu backend Spring Boot
+const data = await getProducts(debounceKeyword); // Goi ham getProducts tu productApi.js de lay danh sach san pham tu backend Spring Boot
 setProducts(data);
     } catch (err) {
 setError(err.message);
@@ -27,7 +38,7 @@ setLoading(false);
   }
 
   loadProducts();
-}, [searchKeyword]);
+}, [debounceKeyword]);
 
 return (
 <main className="app-shell">
