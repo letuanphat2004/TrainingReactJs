@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import { getProducts } from './services/productApi';
+import ProductTable from './components/ProductTable';
 
 function App() {
 const appName = 'Admin';
@@ -63,30 +61,7 @@ return (
   <p className="empty-message">No products found.</p>
 )}
 {!loading && !error && products.length > 0 && (
-<table className="product-table"> 
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Stock</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    {products.map((product) => (
-      <tr key={product.id}>
-        <td>{product.name}</td>
-        <td>${product.price.toLocaleString("vi-VN")}</td>
-        <td>{product.stock}</td>
-        <td>
-         <span className={product.active ? "status active" : "status inactive"}>
-          {product.active ? "🟢" : "🔴"}
-         </span>
-        </td>
-      </tr>
-    ))}
-  </tbody>
-</table>
+  <ProductTable products={products} /> 
 )}
 </section>
 </main>
