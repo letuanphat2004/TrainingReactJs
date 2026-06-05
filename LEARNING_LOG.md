@@ -37,6 +37,8 @@
 - Biet dung `onChange` de cap nhat state khi nguoi dung nhap du lieu.
 - Hieu `event.target.value` la gia tri hien tai trong input.
 - Biet ten bien trong callback phai dung thong nhat, vi neu khai bao `event` thi khong the dung `e`.
+- Biet cach truyen tham so vao ham service de tai su dung logic goi API.
+- Biet dung `encodeURIComponent()` de dua tu khoa tim kiem vao URL an toan.
 
 ### Da lam duoc trong project
 
@@ -44,3 +46,4 @@
 - Gan `value={searchKeyword}` cho o search.
 - Gan `onChange` cho o search de cap nhat `searchKeyword` khi nguoi dung go phim.
 - Hoan thien controlled input cho o tim kiem san pham.
+- Cap nhat `getProducts(keyword)` de ho tro goi API tim kiem theo query `keyword`.
