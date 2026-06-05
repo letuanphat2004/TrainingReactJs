@@ -1,5 +1,7 @@
 backend/target/
 backend/.idea/
+.idea/workspace.xml
+.idea/shelf/
 frontend/node_modules/
 frontend/dist/
 .vscode/
