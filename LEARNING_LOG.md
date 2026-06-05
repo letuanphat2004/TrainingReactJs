@@ -27,3 +27,18 @@
 - Them empty state khi danh sach san pham rong.
 - Them status badge cho trang thai san pham `Active` va `Inactive`.
 - Them UI o tim kiem san pham trong khu vuc action cua trang.
+
+## 2026-06-05
+
+### Kien thuc da nam duoc
+
+- Biet controlled input la cach de React quan ly gia tri cua o nhap lieu.
+- Biet dung `value` de gan gia tri state vao input.
+- Biet dung `onChange` de cap nhat state khi nguoi dung nhap du lieu.
+- Hieu `event.target.value` la gia tri hien tai trong input.
+
+### Da lam duoc trong project
+
+- Them state `searchKeyword` de luu tu khoa tim kiem san pham.
+- Gan `value={searchKeyword}` cho o search.
+- Gan `onChange` cho o search de cap nhat `searchKeyword` khi nguoi dung go phim.

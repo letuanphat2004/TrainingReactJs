@@ -13,6 +13,7 @@ const description = 'Manage product data';
 const [products, setProducts] = useState([]);
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState("");
+const [searchKeyword, setSearchKeyword] = useState("");
 useEffect(() => {
   async function loadProducts() {
     try {
@@ -47,6 +48,8 @@ return (
     type="text" 
     placeholder="Search products..." 
     className="search-input" 
+    value={searchKeyword}
+    onChange={(event) => setSearchKeyword(event.target.value)}
   /> 
   <button type="button">Add Products</button> {/* Nut mo thao tac them san pham */}
 </div>
