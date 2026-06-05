@@ -25,6 +25,7 @@
 - Biet truyen tham so tim kiem vao service va URL API.
 - Hieu cach truyen du lieu tu component cha sang component con bang props.
 - Hieu debounce giup han che so lan goi API khi nguoi dung nhap lieu.
+- Hieu cach truyen callback qua props de component con thay doi trang thai o component cha.
 
 ### Da lam duoc trong project
 
@@ -33,3 +34,4 @@
 - Hoan thien trang thai loading va error khi tim kiem lai.
 - Tach bang san pham thanh component `ProductTable`.
 - Them debounce cho chuc nang tim kiem san pham.
+- Tao `ProductForm` va hoan thien chuc nang mo, dong form.

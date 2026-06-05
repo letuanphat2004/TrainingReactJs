@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import { getProducts } from './services/productApi';
 import ProductTable from './components/ProductTable';
+import ProductForm from './components/ProductForm';
 
 function App() {
 const appName = 'Admin';
@@ -13,6 +14,8 @@ const [loading, setLoading] = useState(true);
 const [error, setError] = useState("");
 const [searchKeyword, setSearchKeyword] = useState("");
 const [debounceKeyword, setDebounceKeyword] = useState("");
+const [showProductForm, setShowProductForm] = useState(false);
+
 useEffect(() => {
   const handler = setTimeout(() => {
     setDebounceKeyword(searchKeyword);
@@ -62,9 +65,12 @@ return (
     value={searchKeyword}
     onChange={(event) => setSearchKeyword(event.target.value)}
   /> 
-  <button type="button">Add Products</button> {/* Nut mo thao tac them san pham */}
+  <button type="button" onClick={() => setShowProductForm(true)}>
+    Add Products
+  </button> {/* Nut mo thao tac them san pham */}
 </div>
 </section>
+{showProductForm && <ProductForm onClose={() => setShowProductForm(false)} />} {/* Hien thi form them san pham neu showProductForm la true */}
 <section className="content-panel">
 {loading && <p>Loading products...</p>}
 {error && <p className="error">{error}</p>}
